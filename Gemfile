@@ -70,5 +70,7 @@ gem 'omniauth-linkedin'
 # active admin
 gem 'activeadmin', github: "gregbell/active_admin"
 
+# Zurb Foundation
+gem 'foundation-rails'
 
 
