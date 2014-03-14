@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
+  
+
+
   # the application controller handles
   # everything across the site
 
@@ -22,6 +25,14 @@ class ApplicationController < ActionController::Base
   	# am i logged in
   	# do i have a cookie called uid?
   	session[:uid].present?
+  end
+
+  def make_sure_logged_in
+    # if i'm not logged in, redirect me to the log in page
+    if not logged_in?
+      flash[:error] = "You must be logged in to see that page"
+      redirect_to new_session_path
+    end
   end
 
 end

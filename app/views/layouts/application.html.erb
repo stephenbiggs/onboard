@@ -26,14 +26,14 @@
 
       <% if logged_in? %>
 
-        <li><strong><%= current_user.username %></strong></li>
-        <li><%= link_to "Add a room", new_room_path %>
-        <li>Log out</li>
+        <li>Hello <strong><%= current_user.username %></strong></li>
+        <li><%= link_to "List a room", new_room_path %>
+        <li><%= link_to "Log out", session_path, method: :delete %></li>
 
       <% else %>
 
         <li><%= link_to "Sign up", new_user_path %></li>
-        <li>Log in</li>
+        <li><%= link_to "Log in", new_session_path %></li>
 
       <% end %>
 
@@ -41,6 +41,20 @@
     </div>
 
     <div class="large-9 columns">
+
+    <% if flash[:error].present? %>
+      <div data-alert class="alert-box warning">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
+    <% if flash[:success].present? %>
+      <div data-alert class="alert-box success">
+        <%= flash[:success] %>
+      </div>
+    <% end %>
+
+
        <%= yield %>
     </div>
 
