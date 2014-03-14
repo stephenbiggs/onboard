@@ -42,6 +42,12 @@ class OrdersController < ApplicationController
 
 
 
+
+			# to send the owner of the room an email
+			OrderMailer.new_order(@order).deliver
+
+
+
 			flash[:success] = "Your room has been booked"
 			redirect_to room_path(@room)
 		else
