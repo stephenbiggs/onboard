@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	# relatinships
 	has_many :rooms
+	has_many :orders
 
 	# validations
 	validates :name, presence: true
