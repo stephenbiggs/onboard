@@ -1,5 +1,9 @@
 Onboard::Application.routes.draw do
 
+# Static pages eg.
+# get "about" => "content#about"
+get "auth/:provider/callback" => "social_logins#create"
+
 # lets set up the index, show, new, create, edit, update, destroy for rooms
 resources :rooms, path: "places" do
 	# because im placing orders on to rooms
