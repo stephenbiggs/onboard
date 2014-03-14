@@ -3,7 +3,12 @@
 <% @rooms.each do |room| %>
 
 	<div>
+
 		<h3>
+		<% if room.image? %>
+			<%= image_tag room.image(:thumbnail) %>
+		<% end %>
+
 			<%= link_to room.name, room_path(room) %>
 		</h3>
 	</div>
