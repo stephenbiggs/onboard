@@ -77,4 +77,14 @@ gem 'activeadmin', github: "gregbell/active_admin"
 # Zurb Foundation
 gem 'foundation-rails'
 
+# add some testing gems
+
+group :test do
+
+	gem 'minitest'
+	gem 'minitest-rails'
+	gem 'capybara'
+
+end
+
 

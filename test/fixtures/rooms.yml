@@ -1,11 +1,30 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+steer:
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+  name: Steer
+  address: 3-11 Pine Street
+  latitude: 51.54
+  longitude: -0.105
+  number_of_beds: 3
+  price_in_pence: 100
+
+
+
+
+riks:
+
+  name: Riks House
+  address: Highbury
+  latitude: 51.45
+  longitude: -0.09
+  number_of_beds: 2
+  price_in_pence: 200
+
+
+
+
+
+to_geocode:
+
+  name: Hummus Brothers
+  address: Exmouth Market London
+  price_in_pence: 300

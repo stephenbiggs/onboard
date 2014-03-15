@@ -29,13 +29,20 @@
 
 <% end %>
 
+
+
+<!-- Javascript for Stripe Payments -->
+
+<!-- STEP 1a -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
+<!-- STEP 1b -->
 <script type="text/javascript">
   // This identifies your website in the createToken call below
   Stripe.setPublishableKey('<%= STRIPE_KEY %>');
   // ...
 
+// -- STEP 2 --  //
   jQuery(function($) {
   // $(document).on("ready page:load", function () {
   $('#new_order').submit(function(event) {
@@ -51,8 +58,7 @@
   });
 });
 
-
-
+// -- STEP 3 --  //
   var stripeResponseHandler = function(status, response) {
   var $form = $('#new_order');
 
@@ -71,3 +77,5 @@
 };
 
 </script>
+
+<!-- Javascript for Stripe Payments END -->
